@@ -1,0 +1,12 @@
+[project]
+name = "flowaudit-ai"
+version = "1.1.0"
+description = "KI-gestützter E-Rechnungs-, 3-Way-Matching- & BPMN-Prozess-Audit-Agent (Purchase-to-Pay)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sherwan Shweish" }]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

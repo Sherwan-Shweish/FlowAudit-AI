@@ -1,0 +1,14 @@
+﻿PRUEFCODE;BEZEICHNUNG;KATEGORIE;BPMN_GATEWAY
+DUBLETTE;Doppelte Rechnung;Dublettenprüfung;Dublettenprüfung
+PFLICHTFELD_FEHLT;Pflichtangabe § 14 Abs. 4 UStG fehlt;Formal;Formale Prüfung
+USTID_UNGUELTIG;USt-IdNr. ungültig;Formal;Formale Prüfung
+LEITWEG_ID_FEHLT;Käuferreferenz/Leitweg-ID (BT-10) fehlt;Formal;Formale Prüfung
+STEUERSATZ_UNZULAESSIG;Unzulässiger Steuersatz;Formal;Formale Prüfung
+SUMMENFEHLER;Rechenfehler;Formal;Formale Prüfung
+KEINE_BESTELLUNG;Keine gültige Bestellung (Maverick Buying);Compliance;Bestellbezug
+KEIN_WARENEINGANG;Kein Wareneingang gebucht;3-Way-Matching;3-Way-Abgleich
+WARENEINGANG_UNVOLLSTAENDIG;Wareneingang unvollständig;3-Way-Matching;3-Way-Abgleich
+PREISABWEICHUNG;Preisabweichung außerhalb Toleranz;3-Way-Matching;3-Way-Abgleich
+MENGENABWEICHUNG;Menge über offener Bestellmenge;3-Way-Matching;3-Way-Abgleich
+SKONTO_FRIST;Skontofrist läuft ab / abgelaufen;Hinweis;–
+VERDAECHTIGER_FREITEXT;Verdacht auf Prompt-Injection;Hinweis;–

@@ -1,0 +1,43 @@
+{
+  "erzeugt": "2026-10-28T07:37:11",
+  "stichtag": "2026-10-28",
+  "hinweis": "Synthetische Demo-Daten (FlowAudit-AI)",
+  "dateien": {
+    "fact_rechnung.csv": {
+      "sha256": "92fff21180c95f44addfc397e2387eef1d9587bf0507702f1d7f412681d0c120",
+      "zeilen": 64
+    },
+    "fact_pruefung.csv": {
+      "sha256": "58625b0d2e592d8b9204d5826bee33031f32562ebd2a0e14ff628b34fd863af3",
+      "zeilen": 179
+    },
+    "dim_lieferant.csv": {
+      "sha256": "4a7c604ade6add6484ea4a414eb03bc2fd888ddbd53c9034822e881445efe9ce",
+      "zeilen": 6
+    },
+    "dim_workflow_schritt.csv": {
+      "sha256": "f18755d512be3925308a296e61a06a7e4ba82907f9f1f0945b89208037496118",
+      "zeilen": 7
+    },
+    "dim_pruefcode.csv": {
+      "sha256": "8b8453f71a103a2e7bf3824cdbe880c55e31eb69f3a9dbef3aee6cea5d00d9f1",
+      "zeilen": 13
+    },
+    "dim_datum.csv": {
+      "sha256": "fcc5120a12e48e8aa2fb185736137c20453e9a7c267e4001f0dd55c5ddcca6f8",
+      "zeilen": 101
+    },
+    "measures.dax": {
+      "sha256": "48b9118dec5876aad3d27c7fc6366942796f8f9a460fb6eab7392ec11d2cd715",
+      "zeilen": null
+    },
+    "laden.pq": {
+      "sha256": "8a46e860819f78bb52a096b6a27544bd6e84e7d667f3e5d168fff944532ccecf",
+      "zeilen": null
+    },
+    "README.txt": {
+      "sha256": "a91a169557841fafa2b29fc6fe28b4ae4bc0eb8c5aeceeddaa25bbe26f6a9c4b",
+      "zeilen": null
+    }
+  }
+}

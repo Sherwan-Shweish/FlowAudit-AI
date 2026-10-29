@@ -1,0 +1,44 @@
+flowchart LR
+    S(("Rechnung<br/>eingegangen"))
+    T1["Dublettenprüfung<br/>(RBKP)"]
+    G1{"✕ Dublette?"}
+    E1((("Sperre:<br/>Dublette")))
+    T2["Formale Prüfung<br/>(§ 14 UStG · EN 16931)"]
+    G2{"✕ Formfehler?"}
+    E2((("Klärung<br/>Lieferant")))
+    T3["Bestellbezug prüfen<br/>(EKKO)"]
+    G3{"✕ Bestellung?"}
+    E3((("Compliance:<br/>Maverick Buying")))
+    T4["3-Way-Matching<br/>(EKPO · MATDOC · RSEG)"]
+    G4{"✕ Ergebnis"}
+    E4((("Sperre:<br/>Wareneingang")))
+    E5((("Klärung Einkauf:<br/>Preis")))
+    E6((("Klärung Einkauf:<br/>Menge")))
+    E7((("Touchless-<br/>Freigabe")))
+    S --> T1
+    T1 --> G1
+    G1 -->|"ja"| E1
+    G1 -->|"nein"| T2
+    T2 --> G2
+    G2 -->|"ja"| E2
+    G2 -->|"nein"| T3
+    T3 --> G3
+    G3 -->|"nein"| E3
+    G3 -->|"ja"| T4
+    T4 --> G4
+    G4 -->|"WE fehlt"| E4
+    G4 -->|"Preis > Toleranz"| E5
+    G4 -->|"Menge > Bestellung"| E6
+    G4 -->|"alles OK"| E7
+    classDef besucht fill:#dbeafe,stroke:#1d4ed8,color:#0b1f4d
+    classDef aktiv_FREIGABE fill:#d1f2d9,stroke:#1a7f37,stroke-width:3px,color:#0b3d1a
+    classDef aktiv_KLAERUNG fill:#fff4cc,stroke:#bf8700,stroke-width:3px,color:#4a3800
+    classDef aktiv_SPERRE fill:#fde2e1,stroke:#cf222e,stroke-width:3px,color:#5c0a0f
+    classDef inaktiv fill:#f6f8fa,stroke:#d0d7de,color:#8c959f
+    classDef org fill:#ffffff,stroke:#8250df,color:#3e1f79
+    classDef info fill:#ffffff,stroke:#57606a,color:#24292f
+    class S,T1,G1,T2,G2,T3,G3,T4,G4 besucht
+    class E1,E2,E3,E4,E6,E7 inaktiv
+    class E5 aktiv_KLAERUNG
+    linkStyle 0,1,3,4,6,7,9,10,12 stroke:#1d4ed8,stroke-width:3px
+    linkStyle 2,5,8,11,13,14 stroke:#d0d7de,stroke-width:1px

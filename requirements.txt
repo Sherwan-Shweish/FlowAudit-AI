@@ -1,0 +1,21 @@
+# ── Kern ──────────────────────────────────────────────────
+pydantic>=2.7
+python-dotenv>=1.0
+defusedxml>=0.7         # sicheres XML-Parsing (XXE-/Entity-Schutz)
+pypdf>=5.0              # ZUGFeRD/Factur-X: XML aus PDF/A-3 extrahieren
+fpdf2>=2.8              # Demo-Generator: sichtbares Rechnungsbild der ZUGFeRD-PDFs
+
+# ── Cockpit & Export ──────────────────────────────────────
+streamlit>=1.50         # app.py (bringt pandas, altair und Pillow mit)
+openpyxl>=3.1           # Excel-Export
+
+# ── LLM-Anbieter (optional – ohne API-Key läuft alles offline)
+anthropic>=2.0          # LLM_PROVIDER=anthropic
+google-genai>=1.0       # LLM_PROVIDER=gemini
+
+# ── Tests ─────────────────────────────────────────────────
+pytest>=8.0
+
+# ── Optional: offizielle Validierung (tools/offizielle_validierung.py)
+# saxonche>=12.5
+# xmlschema>=3.0

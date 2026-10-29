@@ -1,0 +1,28 @@
+# Geheimnisse
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Generierte Daten & Exporte
+data/*.db
+data/exports/
+exports/
+data/aktionsprotokoll.jsonl
+*.xlsx
+*.pbix
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+vendor/
