@@ -1,0 +1,55 @@
+[project]
+name = "flowaudit-ai"
+version = "1.2.1"
+description = "P2P-Audit-Copilot: E-Rechnung (§ 14 UStG, EN 16931) und 3-Way-Matching auf Belegebene – RheinMain Controlling-Suite"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Sherwan Shweish" }]
+dependencies = [
+    # Kern
+    "pydantic>=2.7,<3",
+    "python-dotenv>=1.0",
+    "defusedxml>=0.7",          # sicheres XML-Parsing (XXE-/Entity-Schutz)
+    "pypdf>=5.0",               # ZUGFeRD/Factur-X: XML aus PDF/A-3 extrahieren
+    "fpdf2>=2.8",               # Demo-Generator: sichtbares Rechnungsbild der ZUGFeRD-PDFs
+    # LLM-Anbieter (optional – ohne Schlüssel läuft der Offline-Modus)
+    "anthropic>=0.60",
+    "google-genai>=1.20",
+    # Daten, Cockpit & Export
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "streamlit>=1.50",          # Theme-Schriften, segmented_control, st.html, Altair width="stretch"
+    "altair>=5.4",              # interaktive Diagramme im Designsystem
+    "pyarrow>=16",              # erste Version, die mit NumPy 2 kompatibel ist (Datenübergabe an Streamlit)
+    "pillow>=10.0",
+    "openpyxl>=3.1",
+    "reportlab>=4.2",           # Prüfbericht als PDF (nur freigegebene Klärungen)
+    "python-pptx>=1.0",         # Prüfbericht als PowerPoint
+    # Desktop-App (Agenten-Standard v1, nur macOS)
+    "pywebview>=5.3; sys_platform == 'darwin'",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+# Optional: offizielle CEN-/KoSIT-Validierung (tools/offizielle_validierung.py) – `uv sync --group validierung`
+validierung = ["saxonche>=12.5", "xmlschema>=3.0"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q -ra"
+markers = [
+    "invariante: fachliche Invariante (Summen, Routing, Faktenprüfung)",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+extend-exclude = ["static", "vendor", "data"]
+
+[tool.ruff.lint]
+select = ["F", "E9", "B", "UP", "I"]

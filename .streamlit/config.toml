@@ -1,0 +1,60 @@
+# FlowAudit-AI – Designsystem der RheinMain Controlling-Suite (Startwerte: dunkles Thema)
+# Farbtoken und ihre Begründung: src/ui_design.py · Thema zur Laufzeit: app.py (nur Desktop/lokal)
+
+[server]
+enableStaticServing = true      # Schriften aus static/fonts und Mermaid aus static/ (offline, ohne CDN)
+maxUploadSize = 20              # MB – E-Rechnungen (XML/ZUGFeRD-PDF) werden nur im Arbeitsspeicher geprüft
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = "full"       # lokal: Fehlerursache sichtbar; im Firmenbetrieb "type" oder "none"
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+primaryColor = "#D9825B"            # Akzent Kupfer: nur Interaktion und KI-Elemente, nie Daten
+backgroundColor = "#0E0E0D"
+secondaryBackgroundColor = "#1C1C1A"
+textColor = "#EDEBE6"
+linkColor = "#E39A6F"
+borderColor = "#2A2926"
+showWidgetBorder = true
+showSidebarBorder = true
+baseRadius = "0.6rem"
+buttonRadius = "0.6rem"
+baseFontSize = 16
+font = "Inter, -apple-system, 'Segoe UI', sans-serif"
+codeFont = "'JetBrains Mono', ui-monospace, monospace"
+headingFontWeights = [650, 600, 600, 600, 600, 600]
+codeBackgroundColor = "#161615"
+dataframeHeaderBackgroundColor = "#161615"
+dataframeBorderColor = "#2A2926"
+greenColor = "#3AAB86"              # günstig (CVD-validiert gegen #C8382F, ΔE 12,6 deutan)
+redColor = "#C8382F"                # ungünstig
+chartCategoricalColors = ["#EDEBE6", "#6E6C66", "#D9825B", "#3AAB86", "#C8382F"]
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/fonts/inter-latin-wght-normal.woff2"
+weight = "100 900"
+style = "normal"
+unicodeRange = "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+
+[[theme.fontFaces]]
+family = "Inter"
+url = "app/static/fonts/inter-greek-wght-normal.woff2"
+weight = "100 900"
+style = "normal"
+unicodeRange = "U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF"
+
+[[theme.fontFaces]]
+family = "JetBrains Mono"
+url = "app/static/fonts/jetbrains-mono-latin-wght-normal.woff2"
+weight = "100 800"
+style = "normal"
+
+[theme.sidebar]
+backgroundColor = "#121211"
+secondaryBackgroundColor = "#1C1C1A"

@@ -1,0 +1,35 @@
+# Synchron zu pyproject.toml ([project].dependencies + Gruppe dev) – maßgeblich ist uv.lock.
+# Bevorzugt:  uv sync   ·   Alternative mit pip:  pip install -r requirements.txt
+
+# --- Kern ---
+pydantic>=2.7,<3
+python-dotenv>=1.0
+defusedxml>=0.7          # sicheres XML-Parsing (XXE-/Entity-Schutz)
+pypdf>=5.0               # ZUGFeRD/Factur-X: XML aus PDF/A-3 extrahieren
+fpdf2>=2.8               # Demo-Generator: sichtbares Rechnungsbild der ZUGFeRD-PDFs
+
+# --- LLM-Anbieter (optional – ohne Schlüssel läuft der Offline-Modus) ---
+anthropic>=0.60
+google-genai>=1.20
+
+# --- Daten, Cockpit & Export ---
+pandas>=2.2
+numpy>=1.26
+streamlit>=1.50          # Theme-Schriften, segmented_control, st.html, Altair width="stretch"
+altair>=5.4              # interaktive Diagramme im Designsystem
+pyarrow>=16              # erste Version, die mit NumPy 2 kompatibel ist (Datenübergabe an Streamlit)
+pillow>=10.0
+openpyxl>=3.1
+reportlab>=4.2           # Prüfbericht als PDF (nur freigegebene Klärungen)
+python-pptx>=1.0         # Prüfbericht als PowerPoint
+
+# --- Desktop-App (Agenten-Standard v1, nur macOS) ---
+pywebview>=5.3; sys_platform == 'darwin'
+
+# --- Tests & Qualität ---
+pytest>=8.0
+ruff>=0.6
+
+# --- Optional: offizielle CEN-/KoSIT-Validierung (tools/offizielle_validierung.py) ---
+# saxonche>=12.5
+# xmlschema>=3.0

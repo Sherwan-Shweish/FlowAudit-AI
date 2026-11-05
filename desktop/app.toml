@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# Desktop-Konfiguration nach Agenten-Standard v1
+# Für einen neuen Agenten: Ordner desktop/ kopieren und nur diese Datei anpassen.
+# ---------------------------------------------------------------------------
+
+[app]
+name = "FlowAudit-AI"                    # Fenstertitel, App-Name, Ordnernamen
+untertitel = "P2P-Audit-Copilot"
+logo = "§"                               # Glyphe der Ladeseite (wie im Kopf der App)
+bundle_id = "de.shweish.flowaudit"       # eindeutig je Agent (umgekehrte Domain)
+version = "1.2.1"
+einstieg = "app.py"                      # Streamlit-Skript relativ zum Projektordner
+
+[fenster]
+breite = 1480
+hoehe = 940
+min_breite = 1100
+min_hoehe = 720
+
+[start]
+timeout_sekunden = 90                    # erster Start nach Updates kann länger dauern
+thema_modul = "src.ui_design"            # optional: Modul mit STREAMLIT_THEMA = {"dunkel": {...}, "hell": {...}}
+
+[geheimnisse]
+# Werden – falls nicht als Umgebungsvariable oder in .env gesetzt – aus dem macOS-Schlüsselbund gelesen:
+#   security add-generic-password -s "FlowAudit-AI" -a "ANTHROPIC_API_KEY" -w
+schluessel = ["ANTHROPIC_API_KEY", "GEMINI_API_KEY"]

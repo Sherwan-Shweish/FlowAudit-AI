@@ -1,0 +1,155 @@
+{
+  "01_touchless_xrechnung_ubl.xml": {
+    "syntax": "UBL",
+    "cii_xsd": "–",
+    "en16931": [],
+    "xrechnung": []
+  },
+  "02_touchless_zugferd_cii.xml": {
+    "syntax": "CII",
+    "cii_xsd": "✅",
+    "en16931": [],
+    "xrechnung": [
+      [
+        "BR-DE-21",
+        "warning"
+      ]
+    ]
+  },
+  "03_preisabweichung_ubl.xml": {
+    "syntax": "UBL",
+    "cii_xsd": "–",
+    "en16931": [],
+    "xrechnung": []
+  },
+  "04_preis_in_toleranz_xrechnung_cii.xml": {
+    "syntax": "CII",
+    "cii_xsd": "✅",
+    "en16931": [],
+    "xrechnung": []
+  },
+  "05_fehlender_wareneingang_ubl.xml": {
+    "syntax": "UBL",
+    "cii_xsd": "–",
+    "en16931": [],
+    "xrechnung": []
+  },
+  "06_teillieferung_zugferd_cii.xml": {
+    "syntax": "CII",
+    "cii_xsd": "✅",
+    "en16931": [],
+    "xrechnung": [
+      [
+        "BR-DE-21",
+        "warning"
+      ]
+    ]
+  },
+  "07_maverick_buying_ubl.xml": {
+    "syntax": "UBL",
+    "cii_xsd": "–",
+    "en16931": [],
+    "xrechnung": []
+  },
+  "08_dublette_ubl.xml": {
+    "syntax": "UBL",
+    "cii_xsd": "–",
+    "en16931": [],
+    "xrechnung": []
+  },
+  "09_formfehler_ohne_ustid_ubl.xml": {
+    "syntax": "UBL",
+    "cii_xsd": "–",
+    "en16931": [
+      [
+        "BR-S-02",
+        "fatal"
+      ],
+      [
+        "BR-CO-26",
+        "fatal"
+      ]
+    ],
+    "xrechnung": [
+      [
+        "BR-DE-16",
+        "fatal"
+      ]
+    ]
+  },
+  "10_rechenfehler_mwst_zugferd_cii.xml": {
+    "syntax": "CII",
+    "cii_xsd": "✅",
+    "en16931": [
+      [
+        "BR-CO-17",
+        "fatal"
+      ],
+      [
+        "BR-S-09",
+        "fatal"
+      ]
+    ],
+    "xrechnung": [
+      [
+        "BR-DE-21",
+        "warning"
+      ]
+    ]
+  },
+  "11_prompt_injection_ubl.xml": {
+    "syntax": "UBL",
+    "cii_xsd": "–",
+    "en16931": [],
+    "xrechnung": []
+  },
+  "12_dublettenverdacht_zugferd_cii.xml": {
+    "syntax": "CII",
+    "cii_xsd": "✅",
+    "en16931": [],
+    "xrechnung": [
+      [
+        "BR-DE-21",
+        "warning"
+      ]
+    ]
+  },
+  "13_zugferd_pdf_touchless.pdf": {
+    "syntax": "CII (aus PDF)",
+    "cii_xsd": "✅",
+    "en16931": [],
+    "xrechnung": [
+      [
+        "BR-DE-21",
+        "warning"
+      ]
+    ]
+  },
+  "14_zugferd_pdf_mengenabweichung.pdf": {
+    "syntax": "CII (aus PDF)",
+    "cii_xsd": "✅",
+    "en16931": [],
+    "xrechnung": [
+      [
+        "BR-DE-21",
+        "warning"
+      ]
+    ]
+  },
+  "15_pdf_ohne_xml.pdf": {
+    "syntax": "PDF",
+    "cii_xsd": "–",
+    "en16931": [
+      [
+        "keine XML",
+        "fatal"
+      ]
+    ],
+    "xrechnung": [
+      [
+        "keine XML",
+        "fatal"
+      ]
+    ]
+  }
+}
